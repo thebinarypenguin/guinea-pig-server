@@ -11,6 +11,8 @@ const NODE_ENV = process.env.NODE_ENV;
 const HOST = process.env.HOST;
 const PORT = process.env.PORT;
 
+const LOG_FORMAT = process.env.LOG_FORMAT;
+
 const DB_CLIENT = 'pg';
 const DB_CONNECTION_STRING = `
   postgres://${process.env.DB_USERNAME}
@@ -33,6 +35,7 @@ module.exports = {
   NODE_ENV,
   HOST,
   PORT,
+  LOG_FORMAT,
   DB_CLIENT,
   DB_CONNECTION_STRING,
   TEST_DB_CLIENT,
