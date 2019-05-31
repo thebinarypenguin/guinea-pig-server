@@ -1,0 +1,28 @@
+{
+  "name": "guinea-pig-server",
+  "version": "0.0.0",
+  "description": "Sample application for testing various cloud platforms",
+  "homepage": "https://github.com/thebinarypenguin/guinea-pig-server",
+  "bugs": "https://github.com/thebinarypenguin/guinea-pig-server/issues",
+  "license": "MIT",
+  "author": "Ethan Zimmerman <thebinarypenguin@gmail.com> (https://thebinarypenguin.com)",
+  "repository": "github:thebinarypenguin/guinea-pig-server",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "release": "echo \"IOU one release script\" && exit 1",
+    "start": "node src/server.js",
+    "test": "echo \"IOU one test script\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2"
+  },
+  "private": true
+}
