@@ -1,7 +1,15 @@
 const config = require('./config');
 
-const app = require('./app');
-const pkg = require('../package.json');
+const knex = require('knex');
+const app  = require('./app');
+const pkg  = require('../package.json');
+
+const db = knex({
+  client     : config.DB_CLIENT,
+  connection : config.DB_CONNECTION_STRING,
+});
+
+app.set('db', db);
 
 app.listen(config.PORT, config.HOST, () => {
   console.log(
