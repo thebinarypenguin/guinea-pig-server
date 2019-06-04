@@ -39,7 +39,7 @@ const teardownDatabase = function (db) {
 const disconnectDatabase = function (db) {
 
   return db.destroy();
-}
+};
 
 module.exports = {
   confirmDatabaseIsEmpty,

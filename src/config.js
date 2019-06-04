@@ -6,15 +6,15 @@ if (result.error) {
   throw result.error;
 }
 
-const NODE_ENV = process.env.NODE_ENV;
+const { NODE_ENV } = process.env;
 
-const HOST = process.env.HOST;
-const PORT = process.env.PORT;
+const { HOST } = process.env;
+const { PORT } = process.env;
 
-const LOG_FORMAT = process.env.LOG_FORMAT;
+const { LOG_FORMAT } = process.env;
 
 const DB_CLIENT = 'pg';
-const DB_CONNECTION_STRING = `postgres://`
+const DB_CONNECTION_STRING = 'postgres://'
   + `${process.env.DB_USERNAME}:`
   + `${process.env.DB_PASSWORD}@`
   + `${process.env.DB_HOST}:`
@@ -22,7 +22,7 @@ const DB_CONNECTION_STRING = `postgres://`
   + `${process.env.DB_DATABASE}`;
 
 const TEST_DB_CLIENT = 'pg';
-const TEST_DB_CONNECTION_STRING = `postgres://`
+const TEST_DB_CONNECTION_STRING = 'postgres://'
   + `${process.env.TEST_DB_USERNAME}:`
   + `${process.env.TEST_DB_PASSWORD}@`
   + `${process.env.TEST_DB_HOST}:`

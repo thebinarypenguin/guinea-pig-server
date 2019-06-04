@@ -16,7 +16,7 @@ router.get('/counter', (req, res, next) => {
       res.status(200).json({ value: row.value });
     })
     .catch(next);
-})
+});
 
 router.put('/counter', express.json(), (req, res, next) => {
 
@@ -38,15 +38,15 @@ router.put('/counter', express.json(), (req, res, next) => {
     .then((rows) => {
       res.status(200).json({ value: rows[0] });
     })
-    .catch(next)
-})
+    .catch(next);
+});
 
 router.get('/status', (req, res, next) => {
   res.status(200).end();
 });
 
 router.post('/crash', (req, res, next) => {
-  process.exit(187)
+  process.exit(187);
 });
 
 module.exports = router;

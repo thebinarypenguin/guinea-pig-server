@@ -12,8 +12,7 @@ const db = knex({
 app.set('db', db);
 
 app.listen(config.PORT, config.HOST, () => {
-  console.log(
-    `${pkg.name}@${pkg.version} ` +
-    `is running in ${config.NODE_ENV} mode ` +
-    `on ${config.HOST}:${config.PORT}`);
+  console.log(`${pkg.name}@${pkg.version} `
+            + `is running in ${config.NODE_ENV} mode `
+            + `on ${config.HOST}:${config.PORT}`);
 });

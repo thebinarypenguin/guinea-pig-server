@@ -13,6 +13,7 @@
     "migrate-down": "knex migrate:rollback --all",
     "start": "node src/server.js",
     "test": "nyc mocha",
+    "lint": "eslint .",
     "release": "echo \"IOU one release script\" && exit 1"
   },
   "dependencies": {

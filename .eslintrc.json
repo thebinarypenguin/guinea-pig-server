@@ -1,3 +1,27 @@
 {
-    "extends": "airbnb"
+  "extends": "airbnb",
+  "rules": {
+    "no-multi-spaces": [
+      "error",
+      {
+        "ignoreEOLComments": true,
+        "exceptions": {
+          "Property": true,
+          "VariableDeclarator": true,
+          "ImportDeclaration": true
+        }
+      }
+    ],
+    "key-spacing": [
+      "error",
+      {
+        "align": {
+          "beforeColon": true,
+          "afterColon": true,
+          "on": "colon"
+        }
+      }
+    ],
+    "padded-blocks": "off"
+  }
 }

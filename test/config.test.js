@@ -1,3 +1,6 @@
+/* eslint no-unused-expressions: "off" */
+/* globals describe, context, it */
+
 const { expect }   = require('chai');
 const { execFile } = require('child_process');
 

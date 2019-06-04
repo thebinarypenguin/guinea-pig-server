@@ -1,3 +1,6 @@
+/* eslint no-unused-expressions: "off" */
+/* globals describe, context, it */
+
 const config = require('../src/config');
 
 const { expect }   = require('chai');
@@ -46,8 +49,8 @@ describe('Logging Module (logger.js)', () => {
       });
 
       const requestOpts = {
-        method: 'GET',
-        uri: `http://${config.HOST}:55556`,
+        method : 'GET',
+        uri    : `http://${config.HOST}:55556`,
       };
 
       // Wait 1 second, Make an HTTP request to the server
@@ -99,7 +102,7 @@ describe('Logging Module (logger.js)', () => {
         expect(err.killed).to.be.true;
         expect(err.code).to.be.null;
         expect(err.signal).to.equal('SIGTERM');
-        expect(lines[0]).to.match(/guinea-pig-server.+ is running/)
+        expect(lines[0]).to.match(/guinea-pig-server.+ is running/);
         expect(lines[1]).to.be.empty;
         expect(stderr).to.be.empty;
 
@@ -107,8 +110,8 @@ describe('Logging Module (logger.js)', () => {
       });
 
       const requestOpts = {
-        method: 'GET',
-        uri: `http://${config.HOST}:55557`,
+        method : 'GET',
+        uri    : `http://${config.HOST}:55557`,
       };
 
       // Wait 1 second, Make an HTTP request to the server

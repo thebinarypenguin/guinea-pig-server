@@ -1,3 +1,6 @@
+/* eslint no-unused-expressions: "off" */
+/* globals describe, context, it, before, beforeEach, after, afterEach */
+
 const config = require('../src/config');
 
 config.LOG_FORMAT = 'none';
@@ -157,8 +160,8 @@ describe('Routes (router.js)', () => {
       });
 
       const requestOpts = {
-        method: 'POST',
-        uri: `http://${config.HOST}:55555/crash`,
+        method : 'POST',
+        uri    : `http://${config.HOST}:55555/crash`,
       };
 
       // Wait 1 second, Make an HTTP request to the server
