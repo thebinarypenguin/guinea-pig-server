@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - node    # Latest Stable
-  - lts/*   # Latest LTS
+  # - lts/*   # Latest LTS
 services:
   - postgresql
 env:
