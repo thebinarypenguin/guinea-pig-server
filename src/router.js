@@ -20,6 +20,10 @@ router.get('/counter', (req, res, next) => {
 
 router.put('/counter', express.json(), (req, res, next) => {
 
+  if (!req.body.hasOwnProperty('step')) {
+    return res.status(400).json({ error: '"step" is required' });
+  }
+
   const step = Number.parseInt(req.body.step, 10);
 
   if (!Number.isInteger(step)) {
@@ -42,7 +46,7 @@ router.get('/status', (req, res, next) => {
 });
 
 router.post('/crash', (req, res, next) => {
-  process.exit()
+  process.exit(187)
 });
 
 module.exports = router;
