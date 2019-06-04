@@ -1,10 +1,12 @@
-<p style="text-align:center">
+<p align="center">
   <img src="./guinea-pig.jpg" alt="Technically it's suppossed to be a hamster sitting in a little airplane. From The Simpsons episode 'Duffless'" />
 </p>
 
 # Guinea Pig
 
-Sample application for testing various cloud platforms
+A sample application for testing various cloud platforms
+
+[![Build Status](https://travis-ci.com/thebinarypenguin/guinea-pig-server.svg?token=wgXbRDphARahAzHYfTQU&branch=master)](https://travis-ci.com/thebinarypenguin/guinea-pig-server)
 
 ## Installation
 
