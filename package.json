@@ -9,9 +9,11 @@
   "repository": "github:thebinarypenguin/guinea-pig-server",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "release": "echo \"IOU one release script\" && exit 1",
+    "migrate-up": "knex migrate:latest",
+    "migrate-down": "knex migrate:rollback --all",
     "start": "node src/server.js",
-    "test": "echo \"IOU one test script\" && exit 1"
+    "test": "nyc mocha",
+    "release": "echo \"IOU one release script\" && exit 1"
   },
   "dependencies": {
     "dotenv": "^8.0.0",
@@ -24,6 +26,8 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "request": "^2.88.0",
     "supertest": "^4.0.2"
   },
   "private": true
