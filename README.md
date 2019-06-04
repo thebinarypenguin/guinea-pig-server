@@ -7,7 +7,7 @@
 A sample application for testing various cloud platforms
 
 [![Build Status](https://travis-ci.com/thebinarypenguin/guinea-pig-server.svg?token=wgXbRDphARahAzHYfTQU&branch=master)](https://travis-ci.com/thebinarypenguin/guinea-pig-server)
-[![codecov](https://codecov.io/gh/thebinarypenguin/guinea-pig-server/branch/master/graph/badge.svg?token=QBQ9cxGDUr)](https://codecov.io/gh/thebinarypenguin/guinea-pig-server)
+[![codecov](https://codecov.io/gh/thebinarypenguin/guinea-pig-server/branch/master/graph/badge.svg?token=QBQ9cxGDUr)](https://codecov.io/gh/thebinarypenguin/guinea-pig-server) [![Greenkeeper badge](https://badges.greenkeeper.io/thebinarypenguin/guinea-pig-server.svg?token=1eb2382e4bd1b44bcf755b89a5c1c8c20db0ff55c2481e16d1c22920258b8707&ts=1559673742901)](https://greenkeeper.io/)
 
 ## Installation
 
