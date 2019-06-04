@@ -14,7 +14,7 @@
     "start": "node src/server.js",
     "test": "nyc mocha",
     "lint": "eslint .",
-    "codecov": "nyc mocha --reporter lcovonly && codecov",
+    "codecov": "nyc --reporter lcovonly mocha && codecov",
     "release": "echo \"IOU one release script\" && exit 1"
   },
   "dependencies": {
