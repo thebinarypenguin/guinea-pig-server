@@ -7,25 +7,26 @@ services:
 env:
   global:
     - NODE_ENV=testing
-    - HOST=unused
-    - PORT=unused
+    - HOST=localhost
+    - PORT=8000
     - LOG_FORMAT=none
-    - DB_HOST=unused
-    - DB_PORT=unused
-    - DB_USERNAME=unused
-    - DB_PASSWORD=unused
-    - DB_DATABASE=unused
+    - DB_HOST=localhost
+    - DB_PORT=5432
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=
+    - DB_DATABASE=guinea_pig
     - TEST_DB_HOST=localhost
     - TEST_DB_PORT=5432
     - TEST_DB_USERNAME=postgres
     - TEST_DB_PASSWORD=
     - TEST_DB_DATABASE=guinea_pig_test
-install:
-  - npm ci
-before_script:
-  - psql -c 'CREATE DATABASE guinea_pig_test;' -U postgres && npm run migrate-up
-script:
-  - npm test
 cache:
   directories:
   - "$HOME/.npm"
+install:
+  - npm ci
+before_script:
+  - psql -c 'CREATE DATABASE guinea_pig; CREATE DATABASE guinea_pig_test;' -U postgres
+  - npm run migrate-up
+script:
+  - npm test
