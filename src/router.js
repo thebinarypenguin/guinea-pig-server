@@ -20,7 +20,8 @@ router.get('/counter', (req, res, next) => {
 
 router.put('/counter', express.json(), (req, res, next) => {
 
-  if (!req.body.hasOwnProperty('step')) {
+  // ref: https://eslint.org/docs/rules/no-prototype-builtins
+  if (!Object.prototype.hasOwnProperty.call(req.body, 'step')) {
     return res.status(400).json({ error: '"step" is required' });
   }
 

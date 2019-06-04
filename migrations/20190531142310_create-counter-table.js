@@ -1,6 +1,6 @@
 const TABLE_NAME = 'counter';
 
-exports.up = function(knex, Promise) {
+exports.up = function (knex, Promise) {
 
   return knex.schema.dropTableIfExists(TABLE_NAME).then(() => {
 
@@ -12,7 +12,7 @@ exports.up = function(knex, Promise) {
   });
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
 
   return knex.schema.dropTableIfExists(TABLE_NAME);
 };

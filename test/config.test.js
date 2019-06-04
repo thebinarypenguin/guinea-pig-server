@@ -8,20 +8,18 @@ describe('Config Module (config.js)', () => {
 
   context('when no .env file is present', () => {
 
-    it('should throw an Error', () => {
+    it('should throw an Error', (done) => {
 
       // Execute config.js in a directory with no .env file
-      return new Promise((resolve, reject) => {
 
-        execFile('node', ['../src/config.js'], { cwd: __dirname }, (err) => {
+      execFile('node', ['../src/config.js'], { cwd: __dirname }, (err) => {
 
-          if (err && /Error: ENOENT: no such file or directory/.test(err.message)) {
-            resolve(true);
-          } else {
-            reject(false);
-          }
-        });
+        expect(err).to.be.an('error');
+        expect(err.message).to.match(/Error: ENOENT: no such file or directory/);
+
+        done();
       });
+
     });
   });
 
@@ -29,6 +27,7 @@ describe('Config Module (config.js)', () => {
 
     it('should return a config object populated from env vars', () => {
 
+      /* eslint-disable-next-line global-require */
       const config = require('../src/config');
 
       expect(config).to.have.property('NODE_ENV');
