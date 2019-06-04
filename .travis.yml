@@ -5,24 +5,25 @@ node_js:
 services:
   - postgresql
 env:
-  - NODE_ENV=testing
-  - HOST=unused
-  - PORT=unused
-  - LOG_FORMAT=none
-  - DB_HOST=unused
-  - DB_PORT=unused
-  - DB_USERNAME=unused
-  - DB_PASSWORD=unused
-  - DB_DATABASE=unused
-  - TEST_DB_HOST=localhost
-  - TEST_DB_PORT=5432
-  - TEST_DB_USERNAME=postgres
-  - TEST_DB_PASSWORD=
-  - TEST_DB_DATABASE=guinea_pig_test
+  global:
+    - NODE_ENV=testing
+    - HOST=unused
+    - PORT=unused
+    - LOG_FORMAT=none
+    - DB_HOST=unused
+    - DB_PORT=unused
+    - DB_USERNAME=unused
+    - DB_PASSWORD=unused
+    - DB_DATABASE=unused
+    - TEST_DB_HOST=localhost
+    - TEST_DB_PORT=5432
+    - TEST_DB_USERNAME=postgres
+    - TEST_DB_PASSWORD=
+    - TEST_DB_DATABASE=guinea_pig_test
 install:
   - npm ci
 before_script:
-  - psql -c 'CREATE DATABASE guinea_pig_test;' -U postgres && npm migrate-up
+  - psql -c 'CREATE DATABASE guinea_pig_test;' -U postgres && npm run migrate-up
 script:
   - npm test
 cache:
