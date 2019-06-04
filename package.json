@@ -14,6 +14,7 @@
     "start": "node src/server.js",
     "test": "nyc mocha",
     "lint": "eslint .",
+    "codecov": "nyc --reporter lcovonly mocha && codecov",
     "release": "echo \"IOU one release script\" && exit 1"
   },
   "dependencies": {
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "codecov": "^3.5.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",

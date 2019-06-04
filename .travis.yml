@@ -31,3 +31,4 @@ before_script:
   - npm run migrate-up
 script:
   - npm test
+  - npm run codecov
