@@ -7,6 +7,7 @@
 A sample application for testing various cloud platforms
 
 [![Build Status](https://travis-ci.com/thebinarypenguin/guinea-pig-server.svg?token=wgXbRDphARahAzHYfTQU&branch=master)](https://travis-ci.com/thebinarypenguin/guinea-pig-server)
+[![codecov](https://codecov.io/gh/thebinarypenguin/guinea-pig-server/branch/master/graph/badge.svg?token=QBQ9cxGDUr)](https://codecov.io/gh/thebinarypenguin/guinea-pig-server)
 
 ## Installation
 
