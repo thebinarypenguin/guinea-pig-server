@@ -13,6 +13,18 @@ A sample application for testing various cloud platforms
 [![Build Status](https://travis-ci.com/thebinarypenguin/guinea-pig-server.svg?token=wgXbRDphARahAzHYfTQU&branch=master)](https://travis-ci.com/thebinarypenguin/guinea-pig-server)
 [![codecov](https://codecov.io/gh/thebinarypenguin/guinea-pig-server/branch/master/graph/badge.svg?token=QBQ9cxGDUr)](https://codecov.io/gh/thebinarypenguin/guinea-pig-server)
 
+## Features
+
+  - A "hello world" endpoint to test that the service is running.
+
+  - A stateful counter to test that the database connection is working.
+
+  - A way to manually crash the service to test how the platform handles app
+    crashes.
+
+  - A "health check" route designed to be constantly "pinged" to determine if
+    the service is running.
+
 ## Installation
 
  1. Create an environment file.
