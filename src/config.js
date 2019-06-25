@@ -7,7 +7,7 @@ const { NODE_ENV } = process.env;
 const { HOST } = process.env;
 const { PORT } = process.env;
 
-const { LOG_FORMAT } = process.env;
+const LOG_FORMAT = process.env.LOG_FORMAT || 'dev';
 
 const DB_CLIENT = 'pg';
 const DB_CONNECTION_STRING = 'postgres://'
